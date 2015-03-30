@@ -6,12 +6,12 @@ var accessDateTime;
 /* GET home page. */
 router.get('/', function(_req, _res) {
   timesAccessed++;
-  
+
   accessDateTime = new Date();
   var accessDateTimeString = accessDateTime.toJSON();
   
   console.log(
-  	  "Connection ping @ :"
+  	  "Connection ping @ "
   	+ accessDateTime
   	+ ". This server has been accessed "
   	+ timesAccessed
@@ -21,6 +21,7 @@ router.get('/', function(_req, _res) {
   _res.render('index', {
       title: 'Hello World!'
     , times_accessed: timesAccessed
+    , access_date_time: accessDateTimeString
   });
 });
 

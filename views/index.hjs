@@ -6,6 +6,7 @@
   </head>
   <body>
     <h1>{{ title }}</h1>
+    <p>Connection ping @ {{ access_date_time }}. </p>
     <p>This server has been accessed {{ times_accessed }} time(s).</p>
   </body>
 </html>
